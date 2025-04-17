@@ -189,6 +189,24 @@ discharge_date = patient_info.get("Discharge Date", "")
 diagnosis = patient_info.get("Diagnosis", "")
 medications = patient_info.get("Medications", "")
 
+# Format medications so we can always join into a string
+formatted_meds = []
+for med in medications:
+    if isinstance(med, str):
+        # simple string entry
+        formatted_meds.append(med)
+    elif isinstance(med, dict):
+        # dict entry – pull out the fields you want
+        name = med.get("Medication", "")
+        dose = med.get("Dose", "")
+        freq = med.get("Frequency", "")
+        parts = [p for p in (name, dose, freq) if p]
+        formatted_meds.append(" ".join(parts))
+    else:
+        # fallback for any other type
+        formatted_meds.append(str(med))
+
+
 # Print the extracted variables
 
 print(f"Patient ID: {patient_id}")
@@ -197,12 +215,7 @@ print(f"Date of Birth: {dob}")
 print(f"Admission Date: {admission_date}")
 print(f"Discharge Date: {discharge_date}")
 print(f"Diagnosis: {diagnosis}")
-if isinstance(medications, dict):
-    print(f"Medications: {', '.join(str(v) for v in medications.values())}")
-elif isinstance(medications, list):
-    print(f"Medications: {', '.join(medications)}")
-else:
-    print("Medications: None or invalid format")
+print(f"Medications: {', '.join(formatted_meds)}")
 
 
 with open("parsed_json.json", "w") as file:
