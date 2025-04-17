@@ -1,1 +1,0 @@
-"{\n  \"Patient ID\": \"123456\",\n  \"Name\": \"John Doe\",\n  \"Date of Birth\": \"1954-02-10\",\n  \"Admission Date\": \"2024-02-10\",\n  \"Discharge Date\": \"2024-02-14\",\n  \"Diagnosis\": \"Lobar pneumonia, unspecified organism\",\n  \"Medications\": [\"Amoxicillin IV\", \"Paracetamol\", \"Atorvastatin PO\", \"Amoxicillin PO\"],\n  \"Allergies\": \"None\"\n}"
