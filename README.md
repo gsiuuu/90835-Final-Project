@@ -7,9 +7,15 @@ In modern healthcare settings, preparing clear and accurate discharge summaries 
 Instructions to Set Up the Project:
 
 1. **Clone the repository** to your local machine and navigate into the project folder.
-2. **Install dependencies** using `pip install -r requirements.txt`, which includes Streamlit and the OpenAI Python client.
-3. **Configure your OpenAI credentials** by creating a `credentials.json` file in the root directory with your API key under the property `openai_api_key`.
-4. **Run the application** via `streamlit run app.py` and open the provided URL in your browser.
+2. **Create a virtual environment** through the following code:
+```
+    python -m venv venv
+    source venv/bin/activate    # macOS/Linux
+    venv\Scripts\activate       # Windows
+```
+3. **Install dependencies** using `pip install -r requirements.txt`, which includes Streamlit and the OpenAI Python client.
+4. **Configure your OpenAI credentials** by creating a `credentials.json` file in the root directory with your API key under the property `openai_api_key`.
+5. **Run the application** via `streamlit run app.py` and open the provided URL in your browser.
 
 The structure of the app is as follows:
 
