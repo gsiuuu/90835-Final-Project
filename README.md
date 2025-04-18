@@ -16,6 +16,6 @@ The structure of the app is as follows:
 - **Upload** a JSON file containing fields such as patient name, dates, diagnosis, and medications.  
 - **(Optional)** Add any extra instructions or context in the prompt box to guide the AI’s tone, style, or focus.  
 - **Generate** your summary by clicking on the "Generate Summary" button.
-- **View Patient Data** Click the checkbox to show patient data if you'd like to see patient details.
-- **Review the Letter** Look at the discharge letter to understand important discharge information for the patient.
+- **View patient data** by clicking the  checkbox to show patient information.
+- **Review the letter** to understand important discharge information for the patient.
 
